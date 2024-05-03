@@ -1,23 +1,23 @@
-<header class="p-5 w-full fixed top-0 right-0 backdrop-blur-sm">
+<header class="p-5 w-full fixed top-0 right-0 backdrop-blur-sm font-bold">
     <nav class="flex justify-between max-w-5xl mx-auto">
         <nav class="">
             <a href="{{ .Site.BaseURL }}">
-                <p class="text-lg text-gray-200 mulish font-light">{{ .Site.Title }}</p>
+                <p class="text-lg text-gray-900 mulish font-light hover:text-[#295153] transition-colors">{{ .Site.Title }}</p>
             </a>
         </nav>
         <nav>
             <ul class="hidden gap-5 sm:flex">
                 {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL }}" class="text-gray-200 hover:text-red-600 transition-colors mulish">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}" class="text-gray-900 hover:text-[#295153] transition-colors mulish">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
             <nav class="sm:hidden">
-                <button id="topMenuOpener"><i class="fa-solid fa-bars text-gray-100 text-2xl"></i></button>
-                <button class="hidden" id="topMenuCloser"><i class="fa-solid fa-xmark text-gray-100 text-2xl"></i></button>
+                <button id="topMenuOpener"><i class="fa-solid fa-bars text-gray-900 text-2xl"></i></button>
+                <button class="hidden" id="topMenuCloser"><i class="fa-solid fa-xmark text-gray-900 text-2xl"></i></button>
             </nav>
             <ul class="space-y-5 absolute right-5 top-14 hidden" id="topMenu">
                 {{ range .Site.Menus.main }}
-                <li class="sm:hidden"><a href="{{ .URL }}" class="text-gray-200 hover:text-red-600 transition-colors mulish">{{ .Name }}</a></li>
+                <li class="sm:hidden"><a href="{{ .URL }}" class="text-gray-900 hover:text-[#295153] transition-colors mulish">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
         </nav>
